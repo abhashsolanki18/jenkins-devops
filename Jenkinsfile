@@ -33,6 +33,11 @@ pipeline {
 		// 		sh "mvn failsafe:integration-test failsafe:verify"
 
 		// 	}
+			stage ('package') {
+			steps {
+				sh "mvn package"
+			}
+		}
 		stage ('build docker image') {
 			steps {
 				"docker build -t abhashsolanki18/currency-exchange-devops:$env.BUILD_TAG"
