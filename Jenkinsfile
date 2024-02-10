@@ -16,7 +16,7 @@ pipeline {
 				echo "Build_no- $env.BUILD_ID"
 			}
 		}
-		stage ('checkout') {
+		stage ('compile') {
 			steps {
 				sh "mvn clean compile"
 			}
