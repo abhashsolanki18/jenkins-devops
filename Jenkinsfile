@@ -40,7 +40,7 @@ pipeline {
 		}
 		stage ('build docker image') {
 			steps {
-				"docker build -t abhashsolanki18/currency-exchange-devops:$env.BUILD_TAG"
+				//"docker build -t abhashsolanki18/currency-exchange-devops:$env.BUILD_TAG"
 				script{
 					dockerImage = docker.build("abhashsolanki18/currency-exchange-devops:${env.BUILD_TAG}")
 				}
