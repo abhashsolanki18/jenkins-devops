@@ -22,12 +22,12 @@ pipeline {
 				sh "mvn clean compile"
 			}
 		}
-		stage ('test') {
-			steps {
-				//sh "mvn test"
+		// stage ('test') {
+		// 	steps {
+		// 		//sh "mvn test"
 
-			}
-		}
+		// 	}
+		// }
 		stage ('Integration Test') {
 			steps {
 				sh "mvn failsafe:integration-test failsafe:verify"
